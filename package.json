@@ -1,0 +1,18 @@
+{
+  "name": "cairo-docgen",
+  "version": "1.0.2",
+  "description": "Generate documentation for Cairo smart contracts",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint src"
+  },
+  "dependencies": {
+    "commander": "^9.4.1",
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
+  }
+}

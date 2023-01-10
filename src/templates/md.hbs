@@ -1,0 +1,114 @@
+{{#if viewFunctions}}
+# View Functions
+
+{{/if}}
+{{#each viewFunctions}}
+### {{name}}
+
+`{{{functionInterface}}}`
+
+{{#if natspec.title}}
+{{natspec.title}}
+
+{{/if}}
+{{#if natspec.notice}}
+{{natspec.notice}}
+
+{{/if}}
+{{#if natspec.dev}}
+{{natspec.dev}}
+{{/if}}
+{{#if inputs}}
+
+Inputs
+
+| Name | Type | Description |
+|------|------|-------------|
+{{/if}}
+{{#each inputs}}
+| `{{name}}` | `{{type}}` | {{#if ../natspec.params}} {{ lookup ../natspec.params name }} {{/if}} |
+{{/each}}
+{{#if outputs}}
+
+Outputs
+| Name | Type | Description |
+|------|------|-------------|
+{{/if}}
+{{#each outputs}}
+| `{{name}}` | `{{type}}` | {{#if ../natspec.returns}} {{ lookup ../natspec.returns name }} {{/if}} |
+{{/each}}
+
+{{/each}}
+{{#if externalFunctions}}
+# External Functions
+
+{{/if}}
+{{#each externalFunctions}}
+### {{name}}
+
+`{{{functionInterface}}}`
+
+{{#if natspec.title}}
+{{natspec.title}}
+
+{{/if}}
+{{#if natspec.notice}}
+{{natspec.notice}}
+
+{{/if}}
+{{#if natspec.dev}}
+{{natspec.dev}}
+{{/if}}
+{{#if inputs}}
+
+Inputs
+
+| Name | Type | Description |
+|------|------|-------------|
+{{/if}}
+{{#each inputs}}
+| `{{name}}` | `{{type}}` | {{#if ../natspec.params}} {{ lookup ../natspec.params name }} {{/if}} |
+{{/each}}
+{{#if outputs}}
+
+Outputs
+| Name | Type | Description |
+|------|------|-------------|
+{{/if}}
+{{#each outputs}}
+| `{{name}}` | `{{type}}` | {{#if ../natspec.returns}} {{ lookup ../natspec.returns name }} {{/if}} |
+{{/each}}
+
+{{/each}}
+{{#if events}}
+# Events
+
+{{/if}}
+{{#each events}}
+### {{name}}
+
+`{{{functionInterface}}}`
+
+{{#if natspec.title}}
+{{natspec.title}}
+
+{{/if}}
+{{#if natspec.notice}}
+{{natspec.notice}}
+
+{{/if}}
+{{#if natspec.dev}}
+{{natspec.dev}}
+{{/if}}
+{{#if inputs}}
+
+Outputs
+
+| Name | Type | Description |
+|------|------|-------------|
+{{/if}}
+{{#each inputs}}
+| `{{name}}` | `{{type}}` | {{#if ../natspec.params}} {{ lookup ../natspec.params name }} {{/if}} |
+{{/each}}
+
+{{/each}}
